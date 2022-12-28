@@ -31,7 +31,10 @@ class CustomCardSwiperData extends StatelessWidget {
           Flexible(
             child: Container(
               decoration: BoxDecoration(
-                gradient: item.color,
+                image: DecorationImage(
+                  image: AssetImage(item.imagePath),
+                  fit: BoxFit.cover,
+                ),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -56,7 +59,7 @@ class CustomCardSwiperData extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      item.title!,
+                      item.title,
                       style: const TextStyle(
                         color: textColorStandard,
                         fontWeight: FontWeight.bold,
@@ -67,7 +70,7 @@ class CustomCardSwiperData extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      item.genre!,
+                      item.genre,
                       style: const TextStyle(
                         color: textColorStandard,
                         fontSize: 15,
@@ -77,7 +80,7 @@ class CustomCardSwiperData extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      item.releaseDate!,
+                      item.releaseDate,
                       style: const TextStyle(
                         color: textColorStandard,
                         fontSize: 15,
