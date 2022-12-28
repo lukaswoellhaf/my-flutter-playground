@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_playground/global/data.dart';
+import 'package:my_flutter_playground/global/styles.dart';
 
 class CustomCardSwiperData extends StatelessWidget {
   final MatchItemPreviewModel item;
@@ -41,7 +42,7 @@ class CustomCardSwiperData extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(15),
             decoration: const BoxDecoration(
-              color: Colors.white,
+              color: cardColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10),
@@ -57,7 +58,7 @@ class CustomCardSwiperData extends StatelessWidget {
                     Text(
                       item.title!,
                       style: const TextStyle(
-                        color: Colors.black,
+                        color: textColorStandard,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
@@ -68,7 +69,7 @@ class CustomCardSwiperData extends StatelessWidget {
                     Text(
                       item.genre!,
                       style: const TextStyle(
-                        color: Colors.grey,
+                        color: textColorStandard,
                         fontSize: 15,
                       ),
                     ),
@@ -78,7 +79,7 @@ class CustomCardSwiperData extends StatelessWidget {
                     Text(
                       item.releaseDate!,
                       style: const TextStyle(
-                        color: Colors.grey,
+                        color: textColorStandard,
                         fontSize: 15,
                       ),
                     )

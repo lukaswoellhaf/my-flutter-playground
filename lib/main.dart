@@ -12,9 +12,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: const ColorScheme (
+          brightness: Brightness.dark,
+          primary: primaryColor,
+          secondary: secondaryColor,
+          background: backgroundColor,
+          surface: cardColor,
+          onPrimary: textColorStandard,
+          onSecondary: textColorStandardInverted,
+          error:  errorColor,
+          onError: textColorStandard,
+          onSurface: textColorStandard,
+          onSurfaceVariant: textColorStandard,
+          onBackground: textColorStandard,
+        ),
+      ),
       title: _title,
-      home: Scaffold(
-        body: const CustomCardSwiper(),
+      home: const Scaffold(
+        body: CustomCardSwiper(),
       ),
     );
   }
